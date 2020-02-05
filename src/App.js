@@ -7,9 +7,9 @@ import './App.css';
 
 import {
   BrowserRouter as Router,
+  // HashRouter as Router,
   Switch,
   Route,
-  Link,
   useParams,
 } from "react-router-dom";
 
