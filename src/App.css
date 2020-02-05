@@ -1,0 +1,33 @@
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.App-header {
+  border-bottom: 1px solid #222222;
+  padding: 10px 0;
+  display: flex;
+}
+
+.App-title {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.App-logo {
+  width: 30px;
+  height: 30px;
+}
+
+article {
+  display: flex;
+}
+
+aside {
+  flex: 1;
+}
+
+section {
+  flex: 3;
+}
