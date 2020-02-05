@@ -13,11 +13,6 @@ import {
   useParams,
 } from "react-router-dom";
 
-function PostWrap() {
-  let { id } = useParams();
-  return <Post post={data[id]} />;
-}
-
 function App() {
   return (
     <Router>
@@ -27,11 +22,9 @@ function App() {
           <h2 className="App-title">My Posts</h2>
         </header>
         <section>
-          {/* <Posts posts={data} /> */}
-          {/* <Post post={data[0]} /> */}
           <Switch>
             <Route path="/post/:id">
-              <PostWrap />
+              <Post />
             </Route>
             <Route path="/">
               <Posts posts={data} />

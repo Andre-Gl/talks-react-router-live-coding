@@ -7,7 +7,7 @@ import {
 
 function Posts() {
   const { id } = useParams();
-  const index = data.findIndex(post => post.id == id);
+  const index = data.findIndex(post => post.id === id);
   const post = data[index];
   const nextPost = data[(index + 1) % data.length];
   return (
