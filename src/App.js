@@ -10,7 +10,7 @@ import {
   // HashRouter as Router,
   Switch,
   Route,
-  useParams,
+  Redirect,
 } from "react-router-dom";
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
             <Route path="/">
               <Posts posts={data} />
             </Route>
+            <Redirect from='/user' to='/login' />
           </Switch>
         </section>
       </div>

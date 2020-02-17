@@ -3,10 +3,12 @@ import data from './data.js';
 import {
   Link,
   useParams,
+  useLocation,
 } from "react-router-dom";
 
 function Posts() {
   const { id } = useParams();
+  const location = useLocation();
   const index = data.findIndex(post => post.id === id);
   const post = data[index];
   const nextPost = data[(index + 1) % data.length];
@@ -19,6 +21,7 @@ function Posts() {
       </section>
       <aside>
         <p><Link to="/">Back to List</Link></p>
+        <p>Current location: {location.pathname}</p>
         <p>{post.side}</p>
       </aside>
     </article>
