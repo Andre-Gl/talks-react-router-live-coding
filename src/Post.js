@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './data.js';
+import useData from './useData.js';
 import {
   Link,
   useParams,
@@ -9,6 +9,7 @@ import {
 function Posts() {
   const { id } = useParams();
   const location = useLocation();
+  const {data} = useData();
   const index = data.findIndex(post => post.id === id);
   const post = data[index];
   const nextPost = data[(index + 1) % data.length];

@@ -1,17 +1,19 @@
 import React from 'react';
+import useData from './useData.js';
 import {
   Link,
   useHistory,
   useLocation,
 } from "react-router-dom";
 
-function Posts(props) {
+function Posts() {
   const location = useLocation();
   const history = useHistory();
+  const {data} = useData();
   return (
     <div>
       <ul>
-        {props.posts.map(post => (
+        {data.map(post => (
           <li key={post.id}>
             <Link to={`/post/${post.id}`}>{post.title}</Link>
           </li>
